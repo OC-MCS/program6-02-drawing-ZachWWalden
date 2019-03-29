@@ -44,7 +44,7 @@ public:
 	void addShape(Vector2f pos, ShapeEnum whichShape, Color color, float radius)
 	{
 		// check if new shape thpe is a circle
-		if (!CIRCLE)
+		if (whichShape == CIRCLE)
 		{
 			// alloacte new Circle, add its address to the vector
 			Circle* newCircle = new Circle(pos, color, color, radius);
