@@ -57,7 +57,8 @@ public:
 			shapeVec.push_back(newSqaure);
 		}
 
-	}
+	}//
+
 	/*============================================================================
 	readFile - reads in the settings from the file and sets the current settings to them
 	parameters - fstream& fileIn - reference to the fstream from main
