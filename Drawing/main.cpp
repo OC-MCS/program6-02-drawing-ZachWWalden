@@ -63,13 +63,12 @@ int main()
 				Vector2f mousePos = window.mapPixelToCoords(Mouse::getPosition(window));
 
 				settingsUI.handleMouseHold(mousePos);
+				drawingUI.setDrawingSpaceSize(Vector2f(543.0f - 2 * settingsMgr.getCurRadius(), 493.0f - 2 * settingsMgr.getCurRadius()));
 
 				// check to see if mouse is in the drawing area
 				if (drawingUI.isMouseInCanvas(mousePos))
 				{
 					// add a shape to the list based on current settings
-					drawingUI.setDrawingSpaceSize(Vector2f(543.0f - 2 * settingsMgr.getCurRadius(), 493.0f - 2 * settingsMgr.getCurRadius()));
-					// handle mouse hold on buttons
 					shapeMgr.addShape(mousePos, settingsMgr.getCurShape(), settingsMgr.getCurColor(), settingsMgr.getCurRadius());
 				}
 			}
